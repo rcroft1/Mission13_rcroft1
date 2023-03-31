@@ -1,25 +1,41 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import TopBanner from './pages/blah';
+import MovieList from './pages/Movies';
+import BaconSale from './pages/podcast';
+import Navbar from './Navbar';
+import './styles.css';
+
+// function App() {
+//   return (
+//     <div className="App">
+//       <Navbar />
+//       <TopBanner saying="Joel Hilton Movie Collection" />
+//     </div>
+//   );
+// }
 
 function App() {
+  let component;
+  switch (window.location.pathname) {
+    case '/':
+      component = <TopBanner saying="Joel Hilton Movie Collection" />;
+      break;
+    case '/podcast':
+      component = <BaconSale />;
+      break;
+    case '/Movies':
+      component = <MovieList />;
+      break;
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar />
+      {component}
+    </>
   );
 }
 
