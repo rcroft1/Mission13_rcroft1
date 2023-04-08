@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import TopBanner from './pages/blah';
 import MovieList from './pages/Movies';
 import BaconSale from './pages/podcast';
+import MovieList2 from './pages/MovieList';
 import Navbar from './Navbar';
 import './styles.css';
 
@@ -27,7 +28,7 @@ function App() {
       component = <BaconSale />;
       break;
     case '/Movies':
-      component = <MovieList />;
+      component = <MovieList2 />;
       break;
   }
 

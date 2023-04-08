@@ -34,7 +34,7 @@ function MovieList() {
                 <td>{m.Director}</td>
                 <td>{m.Rating}</td>
                 <td>{m.Category}</td>
-                <td>Edited</td>
+                <td>{m.Edited}</td>
               </tr>
             ))}
           </tbody>
