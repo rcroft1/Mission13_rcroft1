@@ -9,3 +9,4 @@ export type Movie = {
   lentTo: string;
   notes: string;
 };
+// this makes all the variables

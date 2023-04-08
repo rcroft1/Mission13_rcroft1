@@ -4,6 +4,8 @@ import { Movie } from '../types/movie';
 function MovieList2() {
   const [movieData2, setMovieData2] = useState<Movie[]>([]);
 
+  // gets the movies from the api
+
   useEffect(() => {
     const fetchMovie = async () => {
       const rsp = await fetch('https://localhost:4000/movie');
@@ -13,7 +15,7 @@ function MovieList2() {
 
     fetchMovie();
   }, []);
-
+  // this outputs the table of movies
   return (
     <>
       <br></br>
